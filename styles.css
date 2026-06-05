@@ -855,9 +855,14 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .artwork img {
   width: 100%;
-  max-height: 700px;
-  object-fit: cover;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  object-position: bottom left;
   transition: filter 400ms ease;
+}
+.artwork.reverse img {
+  object-position: bottom right;
 }
 .artwork:hover img { filter: none; }
 
@@ -1209,14 +1214,24 @@ ul { list-style: none; margin: 0; padding: 0; }
   .art-rail a:nth-child(2) img,
   .art-rail a:nth-child(4) img { height: clamp(180px, 42vw, 340px); }
 
-  .image-duo, .image-trio { grid-template-columns: 1fr; }
+  .image-duo, .image-trio { grid-template-columns: 1fr; gap: 24px; }
+  .image-trio img, .social-grid img { min-height: auto; height: auto; aspect-ratio: auto; }
+
+  .case-visual img { min-height: auto; height: auto; aspect-ratio: auto; }
 
   .artwork, .artwork.reverse, .artwork.feature {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
-  .artwork.reverse img { grid-column: auto; }
+  .artwork.reverse img { grid-column: auto; object-position: bottom center; }
   .artwork.reverse .artwork-info { grid-column: auto; grid-row: auto; }
-  .artwork img { max-height: none; aspect-ratio: 4/5; }
+  .artwork img { 
+    max-height: 80vh; 
+    aspect-ratio: auto; 
+    object-position: center; 
+    object-fit: contain; 
+    background: transparent;
+  }
 
   .skill-columns { grid-template-columns: 1fr; }
   .skill-block { border-right: none; border-bottom: 1px solid var(--line); }
