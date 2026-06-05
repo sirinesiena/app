@@ -1,0 +1,10 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# PDF lourd — hébergé sur Google Drive
+assets/documents/Portfolio-Sirine-Gherbaoui.pdf
+
+# Captures QA
+__qa_*.png
