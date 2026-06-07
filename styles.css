@@ -1148,6 +1148,33 @@ ul { list-style: none; margin: 0; padding: 0; }
     transition-duration: 1ms !important;
     animation-duration: 1ms !important;
   }
+}
+
+/* ============================================================
+   SCROLL PROGRESS BAR
+   ============================================================ */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--coral);
+  width: 0%;
+  z-index: 10000;
+  transition: width 0.1s;
+}
+
+/* ============================================================
+   MOBILE PADDING FIX
+   ============================================================ */
+@media (max-width: 900px) {
+  main {
+    padding-top: 60px; /* Compense le header fixe */
+  }
+  .hero-home {
+    padding-top: 0 !important; /* Pas de padding top sur la home hero */
+  }
+}
   .js-ready .reveal, .reveal { opacity: 1; transform: none; }
 }
 

@@ -105,6 +105,15 @@
     if (linkPath === currentPath) {
       link.setAttribute('aria-current', 'page');
     }
-  });
+  // ── Scroll Progress Bar ────────────────────────────────────
+  window.addEventListener('scroll', () => {
+    const progressBar = document.getElementById('scroll-progress');
+    if (progressBar) {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      progressBar.style.width = scrolled + '%';
+    }
+  }, { passive: true });
 
 })();
