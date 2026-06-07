@@ -146,20 +146,32 @@ ul { list-style: none; margin: 0; padding: 0; }
 .site-nav a[aria-current='page'] { opacity: 1; }
 
 /* CV bouton dans la nav */
-.nav-cv {
-  padding: 7px 18px !important;
+.nav-cv, .nav-linkedin {
   border: 1px solid currentColor;
   border-radius: 999px;
   opacity: 1 !important;
   transition: background 220ms, color 220ms !important;
 }
-.nav-cv::after { display: none !important; }
-.nav-cv:hover {
+.nav-cv {
+  padding: 7px 18px !important;
+}
+.nav-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0 !important;
+}
+.nav-cv::after, .nav-linkedin::after { display: none !important; }
+.nav-cv:hover, .nav-linkedin:hover {
   background: var(--ink);
   color: var(--paper-2);
 }
 .site-header.dark-header .nav-cv:hover,
-.site-header[data-dark] .nav-cv:hover {
+.site-header[data-dark] .nav-cv:hover,
+.site-header.dark-header .nav-linkedin:hover,
+.site-header[data-dark] .nav-linkedin:hover {
   background: var(--paper-2);
   color: var(--ink);
 }
