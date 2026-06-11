@@ -105,6 +105,7 @@
     if (linkPath === currentPath) {
       link.setAttribute('aria-current', 'page');
     }
+  });
   // ── Scroll Progress Bar ────────────────────────────────────
   window.addEventListener('scroll', () => {
     const progressBar = document.getElementById('scroll-progress');
