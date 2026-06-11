@@ -3,8 +3,6 @@
    War Room Design System — Luxe Editorial
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap');
-
 :root {
   /* Palette */
   --ink:       #0e0d0b;
@@ -931,6 +929,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   position: relative;
 }
 .profile-portrait img {
+    display: block;
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
@@ -1175,8 +1174,6 @@ ul { list-style: none; margin: 0; padding: 0; }
     padding-top: 0 !important; /* Pas de padding top sur la home hero */
   }
 }
-  .js-ready .reveal, .reveal { opacity: 1; transform: none; }
-}
 
 /* ============================================================
    RESPONSIVE
@@ -1203,12 +1200,13 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 @media (max-width: 780px) {
   .site-header { padding: 14px 20px; }
-  .nav-toggle { display: grid; }
+  .nav-toggle { display: grid; position: relative; z-index: 100; }
+  .brand-mark { position: relative; z-index: 100; }
 
   .site-nav {
     position: fixed;
     inset: 0;
-    z-index: -1;
+    z-index: 90;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
