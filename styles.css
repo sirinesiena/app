@@ -1233,7 +1233,10 @@ ul { list-style: none; margin: 0; padding: 0; }
     letter-spacing: 0 !important;
     text-transform: none !important;
   }
+  
   .menu-open .site-nav { opacity: 1; pointer-events: auto; transform: translateY(0); }
+  .menu-open .site-header { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+
 
   .hero { min-height: 96svh; padding: 90px 20px 80px; }
   .hero h1 { font-size: clamp(4rem, 20vw, 6.5rem); }
